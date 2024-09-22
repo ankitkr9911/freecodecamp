@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>C++ Documentation</header>
+            <ul>
+                <li><a class="nav-link" href="#1)_Basic_I/O_Handling">1) Basic I/O Handling</a></li>
+                <li><a class="nav-link" href="#2)_Data_Types">2) Data Types</a></li>
+                <li><a class="nav-link" href="#3)_If_Else_Statement">3) If Else Statement</a></li>
+                <li><a class="nav-link" href="#4)_Switch_Statement">4) Switch Statement</a></li>
+                <li><a class="nav-link" href="#5)_Loops">5) Loops</a></li>
+                <li><a class="nav-link" href="#6)_Pointers">6) Pointers</a></li>
+                <li><a class="nav-link" href="#7)_Arrays">7) Arrays</a></li>
+            </ul>
+        </nav>
+        <div id="box">
+            <section class="main-section" id="1)_Basic_I/O_Handling">
+                <header id="one">1) Basic I/O Handling</header>
+                <p>C++ comes with libraries that provide us with many ways for performing input and output. In C++ input
+                    and
+                    output are performed in the form of a sequence of bytes or more commonly known as streams.</p>
+                <ul>
+                    <li><strong>Input Stream:</strong>If the direction of flow of bytes is from the device(for example,
+                        Keyboard) to the main memory then this process is called input.</li>
+                    <li><strong>Output Stream:</strong>If the direction of flow of bytes is opposite, i.e. from main
+                        memory
+                        to device( display screen ) then this process is called output.</li>
+                </ul>
+                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113125616/C-basic-input-output.png"
+                    alt="" width="700" height="450">
+                <h3>cin in C++</h3>
+                <p>In C++, cin is an object of istream class that is used to accept the input from the standard input
+                    stream
+                    i.e. stdin which is by default associated with keyboard. The extraction operator (>>) is used along
+                    with
+                    cin to extract the data from the object and insert it to the given variable.</p>
+                <p><strong>Syntax: <br></strong><code>cin >> var_name;</code></p>
+                <h3>cout in C++</h3>
+                <p>The cout object in C++ is an object of class iostream. It is defined in iostream header file. It is
+                    used
+                    to display the output to the standard output device i.e. monitor. It is associated with the standard
+                    C
+                    output stream stdout. The data needed to be displayed on the screen is inserted in the standard
+                    output
+                    stream (cout) using the insertion operator(<<). </p>
+                        <p><strong>Example:<br></strong><code>
+                        #include&lt;iostream&gt;<br>
+                        using namespace std;<br>
+                 
+                        // Driver Code<br>
+                        int main()<br>
+                        {<br>
+                            // Print standard output<br>
+                            // on the screen<br>
+                            cout << "Welcome to GFG";<br>
+                 
+                            return 0;<br>
+                        }</code></p>
+            </section>
+            <section class="main-section" id="2)_Data_Types">
+                <header id="two">2) Data Types</header>
+                <p>Data Types in C++ are Mainly Divided into 3 Types:</p>
+                <ol>
+                    <li><strong> Primitive Data Types:</strong>These data types are built-in or predefined data types
+                        and
+                        can be used directly by the user to declare variables. example: int, char, float, bool, etc.
+                        Primitive data types available in C++ are: </li>
+                    <ul>
+                        <li>Integer</li>
+                        <li>Character</li>
+                        <li>Boolean</li>
+                        <li>Floating Point</li>
+                        <li>Double Floating Point</li>
+                        <li>Valueless or Void</li>
+                        <li>Wide Character</li>
+                    </ul>
+                    <li><strong>Derived Data Types:</strong>are derived from the primitive or built-in datatypes are
+                        referred to as Derived Data Types. These can be of four types namely: </li>
+                    <ul>
+                        <li>Function</li>
+                        <li>Array</li>
+                        <li>Pointer</li>
+                        <li>Reference</li>
+                    </ul>
+                    <li><strong>Abstract or User-Defined Data Types:</strong>are defined by the user itself. Like,
+                        defining
+                        a class in C++ or a structure. C++ provides the following user-defined datatypes: </li>
+                    <ul>
+                        <li>Class</li>
+                        <li>Structure</li>
+                        <li>Union</li>
+                        <li>Enumeration</li>
+                        <li>Typedef defined Datatype</li>
+                    </ul>
+                </ol>
+                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113115600/DatatypesInC.png" alt=""
+                    width="800" height="500">
+            </section>
+            <section class="main-section" id="3)_If_Else_Statement">
+                <header id="three">3) If Else Statement</header>
+                <p>Decision Making in C++ helps to write decision-driven statements and execute a particular set of code
+                    based on certain conditions.</p>
+                <p>The if statement alone tells us that if a condition is true it will execute a block of statements and
+                    if
+                    the condition is false it won’t. But what if we want to do something else if the condition is false.
+                    Here comes the C++ else statement. We can use the else statement with if statement to execute a
+                    block of
+                    code when the condition is false.</p>
+                <img id="if_else"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20191118180512/If-else-statement-GeeksforGeeks1.jpg"
+                    alt="" width="600" height="300">
+            </section>
+            <section class="main-section" id="4)_Switch_Statement">
+                <header id="four">4) Switch Statement</header>
+                <p>The switch statement in C++ is a flow control statement that is used to execute the different blocks
+                    of
+                    statements based on the value of the given expression. We can create different cases for different
+                    values of the switch expression. We can specify any number of cases in the switch statement but the
+                    case
+                    value can only be of type int or char.
+                </p>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230224161406/switch-case-in-c.png" alt=""
+                    width="600" height="600">
+                <p><code><strong>Syntax:<br></strong>
+                switch (expression) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    case value_1:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statements_1;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case value_2:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statements_2;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.....<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.....<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// default_statements;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                }
+            </code></p>
+            </section>
+            <section class="main-section" id="5)_Loops">
+                <header id="five">5) Loops</header>
+                <p>In Loop, the statement needs to be written only once and the loop will be executed 10 times as shown
+                    below. In computer programming, a loop is a sequence of instructions that is repeated until a
+                    certain
+                    condition is reached.
+                </p>
+                <h3>There are mainly two types of loops:<br></h3>
+                <ul>
+                    <li><strong>Entry Controlled loops:</strong>In this type of loop, the test condition is tested
+                        before
+                        entering the loop body. For Loop and While Loop is entry-controlled loops.</li>
+                    <li><strong>Exit Controlled Loops:</strong>In this type of loop the test condition is tested or
+                        evaluated at the end of the loop body. Therefore, the loop body will execute at least once,
+                        irrespective of whether the test condition is true or false. the do-while loop is exit
+                        controlled
+                        loop.</li>
+                </ul>
+                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191128194516/Cpp-loops.png" alt=""
+                    width="600" height="300">
+            </section>
+            <section class="main-section" id="6)_Pointers">
+                <header id="six">6) Pointers</header>
+                <p>Pointers are symbolic representations of addresses. They enable programs to simulate
+                    call-by-reference as
+                    well as to create and manipulate dynamic data structures. Iterating over elements in arrays or other
+                    data structures is one of the main use of pointers.
+                </p>
+                <p>The address of the variable you’re working with is assigned to the pointer variable that points to
+                    the
+                    same data type (such as an int or string).
+                </p>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221013162237/PointersinC.png" alt=""
+                    width="600" height="300">
+                <p><code><strong>Syntax:<br></strong>
+                datatype *var_name; <br>
+                int *ptr;   // ptr can point to an address which holds int data
+            </code></p>
+            </section>
+            <section class="main-section" id="7)_Arrays">
+                <header id="seven">7) Arrays</header>
+                <p>In C, variable length arrays (VLAs) are also known as runtime-sized or variable-sized arrays. The
+                    size of
+                    such arrays is defined at run-time.
+                </p>
+                <p>Variably modified types include variable-length arrays and pointers to variable-length arrays.
+                    Variably
+                    changed types must be declared at either block scope or function prototype scope.
+                </p>
+                <p>Variable length arrays are a feature where we can allocate an auto array (on stack) of variable size.
+                    It
+                    can be used in a typedef statement. C supports variable-sized arrays from the C99 standard. For
+                    example,
+                    the below program compiles and runs fine in C.
+                </p>
+                <img id="arrays"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20230302092603/c-array-declaration.png"
+                    alt="" width="600" height="300">
+                <p><code><strong>Syntax:<br></strong>
+                void fun(int size)<br>
+                {<br>
+                    int arr[size];<br>
+                    // code<br>
+                }<br>
+            </code></p>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
